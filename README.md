@@ -28,6 +28,25 @@ Bootstrap the plugin-local virtualenv:
 
 ## Installation
 
+### Homebrew
+
+Recommended long-term setup is a tap formula that installs the `duster-plugin-install` command.
+
+After the tap exists, users will run:
+
+```bash
+brew install injaneity/duster/duster
+duster-plugin-install
+```
+
+What `duster-plugin-install` does:
+- copies the plugin into `~/plugins/duster`
+- updates `~/.agents/plugins/marketplace.json`
+- runs the plugin-local bootstrap
+
+For the tap formula, see:
+- `Formula/duster.rb`
+
 Repo-local:
 
 1. Ensure the plugin is present at `./plugins/duster`
@@ -49,9 +68,9 @@ Suggested release workflow:
 
 1. Keep this plugin as its own git repository rooted at `plugins/duster`
 2. Tag releases with the plugin version from `.codex-plugin/plugin.json`
-3. Ask users to clone the repo into `~/plugins/duster`
-4. Ask users to run `~/plugins/duster/scripts/setup.sh`
-5. Ask users to register the plugin in `~/.agents/plugins/marketplace.json`
+3. Publish a release tarball and update `Formula/duster.rb` with the release `sha256`
+4. In a Homebrew tap repo, place `Formula/duster.rb` under `Formula/`
+5. Ask users to run `brew install <tap>/duster` and then `duster-plugin-install`
 
 Marketplace entry:
 
@@ -72,9 +91,9 @@ Marketplace entry:
 
 Home-local:
 
-1. Copy `plugins/duster` to `~/plugins/duster`
-2. Add or update `~/.agents/plugins/marketplace.json` to point to `./plugins/duster`
-3. Bootstrap the plugin-local environment:
+1. Copy `plugins/duster` to `~/plugins/duster`, or use `duster-plugin-install`
+2. Add or update `~/.agents/plugins/marketplace.json` to point to `./plugins/duster` if you did not use the installer
+3. Bootstrap the plugin-local environment if you did not use the installer:
 
 ```bash
 ~/plugins/duster/scripts/setup.sh
