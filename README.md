@@ -42,7 +42,7 @@ Recommended repository name: `duster`
 Suggested GitHub repository:
 
 ```text
-https://github.com/zanecheejy/duster
+https://github.com/injaneity/duster
 ```
 
 Suggested release workflow:
