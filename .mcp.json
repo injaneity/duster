@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "duster": {
+      "command": "./scripts/run_server.sh",
+      "args": [
+      ]
+    }
+  }
+}

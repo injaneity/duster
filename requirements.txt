@@ -1,0 +1,6 @@
+click
+numpy
+openai
+scikit-learn
+tree-sitter
+tree-sitter-go

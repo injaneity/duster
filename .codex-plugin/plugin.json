@@ -1,0 +1,38 @@
+{
+  "name": "duster",
+  "version": "0.3.0",
+  "description": "Reusable Codex plugin for scoring Go codebase hygiene with semantic embeddings.",
+  "author": {
+    "name": "Zane Chee",
+    "email": "zanecheejy@gmail.com",
+    "url": "https://github.com/zanecheejy"
+  },
+  "homepage": "https://github.com/zanecheejy/duster",
+  "repository": "https://github.com/zanecheejy/duster",
+  "license": "MIT",
+  "keywords": [
+    "go",
+    "hygiene",
+    "embeddings",
+    "mcp",
+    "codex-plugin"
+  ],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Duster",
+    "shortDescription": "Score Go codebase hygiene",
+    "longDescription": "Self-contained Codex plugin that snapshots, diffs, and reports Go codebase hygiene using embeddings and a local cache.",
+    "developerName": "SG4195",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Run duster snapshot on this repo.",
+      "Show duster diff from the latest snapshots.",
+      "Generate a duster markdown report and inject into AGENTS.md."
+    ],
+    "brandColor": "#1F7A8C"
+  }
+}
