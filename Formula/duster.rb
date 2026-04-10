@@ -4,7 +4,7 @@ class Duster < Formula
   desc "Installer for the Duster Codex plugin"
   homepage "https://github.com/injaneity/duster"
   url "https://github.com/injaneity/duster/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "REPLACE_WITH_RELEASE_SHA256"
+  sha256 "4e13b892d8e780a321f3d6b6acf46ca95fccc247935623b2bb9bcf568d0ea63f"
   license "MIT"
 
   depends_on "python@3.12"
